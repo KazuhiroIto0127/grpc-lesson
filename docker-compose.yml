@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  grpc_server:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "50051:50051" # gRPCのデフォルトのポート
+    tty: true
+    container_name: go-grpc
